@@ -1,1 +1,0 @@
-The goal of this challenge was to extract contents from all of the page related files, and traverse through while looking for the "flag{" string.  

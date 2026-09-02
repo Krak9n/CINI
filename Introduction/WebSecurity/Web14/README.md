@@ -1,1 +1,0 @@
-Simple script for obtaining a flag from the **Comment**s by analyzing the contents of the index page.  

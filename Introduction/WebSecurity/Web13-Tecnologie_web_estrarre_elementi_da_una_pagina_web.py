@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+Had to filter all of the <span> tags and then just replace newlines with no-spaces.
+"""
 import requests
 from bs4 import BeautifulSoup
 

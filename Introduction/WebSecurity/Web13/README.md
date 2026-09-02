@@ -1,1 +1,0 @@
-Had to filter all of the **span** tags and then just replace newlines with no-spaces.

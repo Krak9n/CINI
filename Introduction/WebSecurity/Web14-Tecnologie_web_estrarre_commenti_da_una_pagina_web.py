@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+Simple script for obtaining a flag from the Comments by analyzing the contents of the index page.  
+"""
 import requests
 from bs4 import BeautifulSoup
 from bs4 import Comment

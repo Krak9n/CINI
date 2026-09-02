@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+The goal of this challenge was to extract contents from all of the page related files, and traverse through while looking for the "flag{" string.  
+"""
 def traverse_js(soup):
     scripts = []
     for script in soup.find_all('script'):
