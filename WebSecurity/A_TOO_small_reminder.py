@@ -1,25 +1,17 @@
 #!/usr/bin/env python3
 import requests
 from urllib.parse import urljoin
-
 session = requests.Session()
 url = "http://too-small-reminder.challs.olicyber.it/"
+data = {"username": "temp_user1", "password": ""}
 
-data = {"username": "admin", "password": ""}
+#registered = session.post(urljoin(url, "register"), json=data)
+#print(registered.text)
 
-init = session.get(url)
-print()
-print(init.text)
-
-r = session.post(urljoin(url, "register"), json=data)
-print(r.json())
-
-#l = session.post(urljoin(url, "login"), json=data)
-#print(l.text)
-
-#d = session.get(urljoin(url, "logout"), cookies=session.cookies)
-#print(d.text)
-
-a = session.get(urljoin(url, "admin"), cookies=session.cookies)
-print(a.text)
-    
+login = session.post(urljoin(url, "login"), json=data)
+print(session.cookies)
+d = session.get(urljoin(url, "logout"), cookies=session.cookies)
+print(d.text)
+print(session.cookies)
+#admin = session.get(urljoin(url, "admin"), cookies=session.cookies)
+#print(admin.text)

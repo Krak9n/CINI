@@ -1,0 +1,1 @@
+To find a flag try to follow the UDP stream. The flag characters will be send in form of datagrams.
