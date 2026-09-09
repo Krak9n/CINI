@@ -6,7 +6,7 @@
 - pyshark  
   
 ### Web Security  
-- burp
+- burp suite
 - python libraries:  
   + requests  
   + BeautifulSoup  

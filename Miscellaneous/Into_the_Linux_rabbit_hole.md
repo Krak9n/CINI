@@ -22,7 +22,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/binHOSTNAME=oc-tra
 ### Second part
 ---
 Finding the first part was by far the easiest one. It is hidden in the /entrypoint.sh script. 
-Just run the **cat** command on it and it will be there. 
+Just run **cat** command on it and it will be there. 
 ```
 flag{....c0mpl3x_And_4m4.....}  
 ```
