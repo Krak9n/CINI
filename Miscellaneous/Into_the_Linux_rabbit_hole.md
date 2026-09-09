@@ -6,7 +6,6 @@ Wait for hashlib to generate a valid code and then paste it into the remote. Acc
 Also, I suppose that with it is possible to find the entire flag with some grep magic.  
 
 ## Flag
----
 
 ### First part
 ---
@@ -25,9 +24,9 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/binHOSTNAME=oc-tra
 Finding the first part was by far the easiest one. It is hidden in the /entrypoint.sh script. 
 Just run the **cat** command on it and it will be there. 
 ```
-flag{....c0mpl3x_And_4m4.....}
-g```
-
+flag{....c0mpl3x_And_4m4.....}  
+```
+  
 ### Third part
 ---
 I was checking the filesystem with **df -h** command and to my surpirse there was this file **/root/challenges/olicyber/training-misc/misc15/src/flag_piece** mounted on **/var/log/flg**.
