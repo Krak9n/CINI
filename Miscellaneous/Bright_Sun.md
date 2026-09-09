@@ -1,0 +1,1 @@
+The first and the easiest challenge. Just run the **stegsolve** over the file, and the flag will be visible on **Green Plane 1**.
