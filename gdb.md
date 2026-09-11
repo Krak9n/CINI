@@ -1,5 +1,3 @@
----
-
 `int 3` is an instruction that is primarly used to by debuggers to put breakpoints.  
 `run` is used for executing programs.
 `continue` to resume the program's execution.
