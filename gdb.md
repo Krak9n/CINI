@@ -1,7 +1,7 @@
-`int 3` is an instruction that is primarly used to by debuggers to put breakpoints.    
-`run` is used for executing programs.  
-`continue` to resume the program's execution.  
-`info registers` allows viewing the state of registers on cpu.   
+- `int 3` is an instruction that is primarly used to by debuggers to put breakpoints.    
+- `run` is used for executing programs.  
+- `continue` to resume the program's execution.  
+- `info registers` allows viewing the state of registers on cpu.   
 
 --- 
 `print` or `p` can be used to show results of expressions.  
