@@ -2,7 +2,11 @@ First step was to decode the original image with xxd. After digging into decoded
 
 ---
 
-Examine pidgey.jpg with exiftool. There will be these next fields.
+Inside pidgey we find a link to another image: [https://postimg.cc/7bz4c6Jg](https://postimg.cc/7bz4c6Jg), **congratulations**.
+
+---
+
+Examine congratulations.jpg with exiftool. There will be these next fields.
 ```
 Image Width                     : 641
 Image Height                    : 587
