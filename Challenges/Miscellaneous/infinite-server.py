@@ -1,46 +1,42 @@
 #!/usr/bin/env python3
 import requests
 from bs4 import BeautifulSoup
+from selenium import webdriver 
+from selenium.webdriver.common.by import By
 url = "http://infinite.challs.olicyber.it/"
-def math(soup):
-    p = ''.join([p_tag.get_text() for p_tag in soup.find_all("p")]).split()
-    print(p)
-    print(p[2] + p[4])
-    return requests.post(url, data={str(p[2] + p[4])})
-    
-def art(soup):
-    p = ''.join([p_tag.get_text() for p_tag in soup.find_all("p")]).replace("?","").split()
-    print(p)
-    return requests.post(url, data=p[5])
+d = webdriver.Firefox()
+d.get(url)
 
-def grammar(soup):
+def math(soup, driver):
+    p = ''.join([p_tag.get_text() for p_tag in soup.find_all("p")]).split()
+    driver.find_element(By.ID, "sum").send_keys(str(int(p[2]) + int(p[4].replace("?", ""))));
+    driver.find_element(By.CSS_SELECTOR, "input[type='submit']").click()
+    
+def art(soup, driver):
+    p = ''.join([p_tag.get_text() for p_tag in soup.find_all("p")]).replace("?","").split()
+    driver.find_element(By.ID, p[5]).click()		
+
+def grammar(soup, driver):
     p = ''.join([p_tag.get_text() for p_tag in soup.find_all("p")]).replace("?", "").replace('"', "").split()
     c = 0
     for i in p[6]:
         if i == p[1]:
             c += 1
-    print(p)
-    print(c)
-    return requests.post(url, data={str(c)})
+    driver.find_element(By.ID, "letter").send_keys(str(c));
+    driver.find_element(By.CSS_SELECTOR, "input[type='submit']").click()
 
 i = 0
-page = requests.get(url)
 while True:
-    print(i, page.text, page.cookies.get_dict())
-    soup = BeautifulSoup(page.text, 'html.parser')
-    if "flag{" in page.text:
+    page = requests.get(url)
+    print(i, d.page_source)
+    soup = BeautifulSoup(d.page_source, 'html.parser')
+    if "flag{" in d.page_source:
         break
     for s in soup.find_all('h2'):
         if s.text == "ART TEST":
-            print("a entered")
-            page = art(soup)
-            print("a exited")
+            art(soup, d)
         elif s.text == "GRAMMAR TEST":
-            print("g entered")
-            page = grammar(soup)
-            print("g exited")
+            grammar(soup, d)
         elif s.text == "MATH TEST":
-            print("m entered")
-            page = math(soup)
-            print("m exited")
+            math(soup, d)
     i += 1
