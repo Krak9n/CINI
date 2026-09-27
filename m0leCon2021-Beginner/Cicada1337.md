@@ -18,6 +18,9 @@ After multiplying these 3 prime number you get the name of the subreddit: **r/38
 
 ---
 
+On the subreddit we can find famous [**Koan**](https://www.reddit.com/r/388683811/comments/tcdcpw/_/), and a [number of indices](https://www.reddit.com/r/388683811/comments/tcddrw/_/).
+
+Python script would look something like this:
 ```py
 k = """{A KOAN}
 A MAN DECIDED TO GO AND STUDY WITH A MASTER
@@ -42,5 +45,6 @@ AFTER A LONG PAUSE THE MASTER REPLIED, "THEN YOU ARE WELCOME TO COME STUDY" """
 first = [9, 19, 5, 1, 14, 19, 12, 7, 5, 20, 6, 16, 20, 8, 17, 2, 9, 20, 19, 15, 8, 16, 18, 1]
 second = [43, 50, 35, 1, 41, 10, 11, 44, 23, 11, 58, 22, 63, 12, 27, 34, 4, 34, 57, 35, 44, 80, 29, 8]
 for i in range(len(first)):
-	print(k[first[i]:second[i]])
+	print(k[first[i]-1][second[i]-1])
 ```
+Last characters for the flag are **ND}**.
