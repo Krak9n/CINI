@@ -1,0 +1,2 @@
+We are being given a pcap and keys.log files. The whole process of finding a flag here involves no more than just using the **keys** file to decrypt TLS traffic.
+Then just follow the HTTP stream and the flag will be sent on 490th packet.  

@@ -1,0 +1,1 @@
+To find a flag download provided pcap file, and read the TCP packets. Start netcat on port written in challenge description and just use that hash that corresponds to your NONCE number.
